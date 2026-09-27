@@ -1,27 +1,49 @@
-#include <iostream>  
-#include "io.hpp"
-#include "sortings.hpp" 
+#include <iostream>
 
-int main() { //главная функция программы
+void print_array(const int *arr, const int size);
+void my_sort(int *arr, const int size);
+
+int main() {
     int size;
+
     std::cout << "Введите размер массива: ";
     std::cin >> size;
 
     int *arr = new int[size];
 
     std::cout << "Введите элементы массива: ";
+
     for (int i = 0; i < size; i++) {
         std::cin >> arr[i];
     }
-    
-    biv::print_array("Массив до сортировки: ", arr, size);
 
-    biv::my_sort(arr, size);
+    print_array(arr, size);
 
-    biv::print_array("Массив после сортировки: ", arr, size);
+    my_sort(arr, size);
+
+    print_array(arr, size);
 
     delete[] arr;
+
     return 0;
 }
 
+void print_array(const int *arr, const int size) {
+    for (int i = 0; i < size; i++) {
+        std::cout << arr[i] << " ";
+    }
 
+    std::cout << std::endl;
+}
+
+void my_sort(int *arr, const int size) {
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - 1 - i; j++) {
+            if (arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
