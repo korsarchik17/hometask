@@ -3,7 +3,7 @@
 namespace menu {
     struct MenuItem {
         const char* const title;
-        const MenuItem* (*func)(const MenuItem current); 
+        const MenuItem* (*func)(const MenuItem* current); 
         
         const MenuItem* parent;
 
@@ -11,3 +11,5 @@ namespace menu {
         const int children_count;
     };
 }
+
+

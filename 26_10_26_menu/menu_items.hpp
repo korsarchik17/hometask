@@ -1,8 +1,7 @@
 #pragma once
 #include "menu.hpp"
 
-namespace menu{
-    
+namespace menu {
     extern const MenuItem MAIN;
 
     extern const MenuItem EXIT;
@@ -11,5 +10,12 @@ namespace menu{
     extern const MenuItem FIRST_CLASS;
     extern const MenuItem SECOND_CLASS;
     extern const MenuItem THIRD_CLASS;
-    extern const MenuItem
+    extern const MenuItem CLASS_EXIT;
+
+    extern const MenuItem RUSSIAN;
+    extern const MenuItem LITERATURE;
+    extern const MenuItem MATH;
+    extern const MenuItem PE;
+    extern const MenuItem SUBJ_EXIT;
+    
 }
